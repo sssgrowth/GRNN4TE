@@ -16,7 +16,6 @@ class Base_Model(torch.nn.Module):
 		self.args=args
 		self.process=Process(args)
 		self.util=Util()
-
 		print('model: ',self._get_name())
 
 		if self.args.use_bert:
@@ -24,9 +23,6 @@ class Base_Model(torch.nn.Module):
 			self.load_word_embedding()
 		if self.args.use_word_embeding:
 			self.load_word_embedding()
-
-
-	
 
 	def load_word_embedding(self):
 		print('load word embeddings')
@@ -40,9 +36,6 @@ class Base_Model(torch.nn.Module):
 		self.build_vocab_ix=load.load_build_vocab()
 		self.char_types=len(self.char_ix)
 		self.build_size=len(self.build_vocab_ix)
-
-	
-
 
 	def muti_head_attention(self,q,k,v,nb_head,size_per_head):
 		
@@ -63,19 +56,13 @@ class Base_Model(torch.nn.Module):
 		_k=k.view([sq[0]*sq[1],sq[2],sq[3]])
 		_v=v.view([sq[0]*sq[1],sq[2],sq[3]])
 		
-		# (b*head,seq,dim) (b*head,dim,seq) => (b*head,seq,seq)
-		# print(_q.size(),_k.size())
-		# factor=torch.sqrt(torch.cuda.FloatTensor([size_per_head])).view([1,1,1])
 		factor=np.sqrt(float(size_per_head))
 		a=torch.bmm(_q,torch.transpose(_k,1,2))/factor
 		alpha=torch.nn.functional.softmax(a,-1)
 
-		# (b*head,seq,seq) (b*head,seq,dim) => (b*head,seq,dim)
 		o=torch.bmm(alpha,_v)
 		_o=o.view([sq[0],sq[1],sq[2],sq[3]])
-		# print('b',_o.size())
 		o1=torch.transpose(_o,1,2)
-		# print(o1.size())
 		o2=o1.contiguous().view([sq[0],sq[2],nb_head*size_per_head])
 		return o2,o2,alpha
 
@@ -137,6 +124,4 @@ class Base_Model(torch.nn.Module):
 
 	def init_weight(self,w):
 		torch.nn.init.xavier_uniform_(w)
-
-
 
