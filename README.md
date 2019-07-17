@@ -56,7 +56,7 @@ Get more inspiration or evolution from papers for object detection or face detec
   pages={779--788},
   year={2016}
 }
-```
+```  
 Papers about face detection.
 ```
 @inproceedings{schroff2015facenet,
@@ -85,7 +85,7 @@ Papers about face detection.
   year={2004},
   publisher={Springer}
 }
-```
+```  
 ## Updating...
 
 * 2018-Jun-10, GRNN v0.1, initial version, builing a new framework, graph recursive neural network, for graph data processing and lifelong relation extraction
