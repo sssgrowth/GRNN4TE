@@ -17,5 +17,5 @@ GRNN4TE is a framework to accelerate graph data processing and triple extraction
 ## Updating...
 
 * 2018-Jun-10, GRNN v0.1, initial version
-* 2018-Nov-03, GRNN4TE v0.2, supporting JRL
-* 2019-Mar-20, GRNN4TE v0.2, supporting vertex visualization, optimized graph search
+* 2018-Nov-03, GRNN4TE v0.2, enhancing joint representation learning
+* 2019-Mar-20, GRNN4TE v0.2, supporting vertex visualization for interpretability and adding optimized graph search
