@@ -12,7 +12,7 @@ GRNN4TE is a framework to accelerate graph data processing and lifelong triple e
   * [Addition](#addition)
     * [Model visualization](#model-visualization)
     * [Data visualization analysis](#data-visualization-analysis)
-    * [Object detection](#object-detection)
+    * [Object detection papers](#object-detection-papers)
 * [Citation](#citation) 
 * [Updating](#updating)
 
@@ -25,7 +25,7 @@ Different colors denote different relation types. As shown in Figure 1, PCA tend
 <span><img src="pic/tsneboth-1.png" width="90%" alt="Dimensionality reduction with t-SNE"/></span>  
 Figure 2. Dimensionality reduction for vertices with t-SNE
 
-#### RCNN
+#### Object detection papers
 We can get more inspiration or evolution from these papers for object detection.  
 ```
 @inproceedings{girshick2014rich,
