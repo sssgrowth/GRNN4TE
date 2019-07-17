@@ -10,7 +10,8 @@ GRNN4TE is a framework to accelerate graph data processing and triple extraction
 * [Basics](#basics)
   * [Installation](#installation)
   * [Addition](#addition)
-    * [Visualization](#visualization)
+    * [Model Visualization](#model-visualization)
+    * [Data Visualization](#data-visualization)
 * [Citation](#citation) 
 * [Updating](#updating)
 
@@ -18,9 +19,9 @@ GRNN4TE is a framework to accelerate graph data processing and triple extraction
 ### Addition
 #### Visualization
 <span><img src="pic/pcaboth-1.png" width="90%" alt="Dimensionality reduction with PCA"/></span>  
-Figure 1. Dimensionality reduction with PCA
-<span><img src="pic/tsneboth-1.png" width="90%" alt="Dimensionality reduction with t-SNE"/></span>
-Figure 2. Dimensionality reduction with t-SNE
+Figure 1. Dimensionality reduction for vertices with PCA
+<span><img src="pic/tsneboth-1.png" width="90%" alt="Dimensionality reduction with t-SNE"/></span>  
+Figure 2. Dimensionality reduction for vertices with t-SNE
 ## Updating...
 
 * 2018-Jun-10, GRNN v0.1, initial version, builing a new framework, graph recursive neural network, for graph data processing and lifelong relation extraction
