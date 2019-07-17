@@ -10,4 +10,8 @@ GRNN4TE is a framework to accelerate graph data processing and triple extraction
 * [Basics](#basics)
   * [Installation](#installation)
   * [Addition](#addition)
+    * [Visualization](#visualization)
+* [Citation](#updating) 
 * [Updating](#updating)
+
+
