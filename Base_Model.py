@@ -66,8 +66,6 @@ class Base_Model(torch.nn.Module):
 		o2=o1.contiguous().view([sq[0],sq[2],nb_head*size_per_head])
 		return o2,o2,alpha
 
-
-
 	def init_lstm(self,input_lstm):
 		"""
 		Initialize lstm
@@ -79,6 +77,7 @@ class Base_Model(torch.nn.Module):
 			weight = eval('input_lstm.weight_hh_l' + str(ind))
 			bias = np.sqrt(6.0 / (weight.size(0) / 4 + weight.size(1)))
 			torch.nn.init.uniform_(weight, -bias, bias)
+			
 		if input_lstm.bidirectional:
 			for ind in range(0, input_lstm.num_layers):
 				weight = eval('input_lstm.weight_ih_l' + str(ind) + '_reverse')
@@ -121,7 +120,5 @@ class Base_Model(torch.nn.Module):
 		if input_linear.bias is not None:
 			input_linear.bias.data.zero_()
 
-
 	def init_weight(self,w):
 		torch.nn.init.xavier_uniform_(w)
-
