@@ -59,6 +59,13 @@ Get more inspiration or evolution from papers for object detection or face detec
 ```
 Papers about face detection.
 ```
+@inproceedings{schroff2015facenet,
+  title={Facenet: A unified embedding for face recognition and clustering},
+  author={Schroff, Florian and Kalenichenko, Dmitry and Philbin, James},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={815--823},
+  year={2015}
+}
 @article{viola2001rapid,
   title={Rapid object detection using a boosted cascade of simple features},
   author={Viola, Paul and Jones, Michael and others},
