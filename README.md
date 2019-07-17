@@ -26,7 +26,7 @@ Different colors denote different relation types. As shown in Figure 1, PCA tend
 Figure 2. Dimensionality reduction for vertices with t-SNE
 
 #### Object detection papers
-We can get more inspiration or evolution from these papers for object detection.  
+Get more inspiration or evolution from these papers for object detection.  
 ```
 @inproceedings{girshick2014rich,
   title={Rich feature hierarchies for accurate object detection and semantic segmentation},
