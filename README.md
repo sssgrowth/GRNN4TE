@@ -3,7 +3,9 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 
-GRNN4TE is a framework to accelerate graph data processing and lifelong triple extraction research. It is a preview. The detailed descriptions are still in the making.
+GRNN4TE is a framework to accelerate graph data processing and lifelong triple extraction research. It is a preview. The detailed descriptions are still in the making.  
+
+<span><img src="pic/1563456690.840768.png" width="10%" alt="Dimensionality reduction with PCA"/></span>  
 
 ### Contents
 
