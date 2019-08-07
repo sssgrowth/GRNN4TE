@@ -12,6 +12,7 @@ GRNN4TE is a framework to accelerate graph data processing and lifelong triple e
 * [Basics](#basics)
   * [Installation](#installation)
   * [Addition](#addition)
+    * [Elastic weight consolidation](#elastic-weight-consolidation)
     * [Model visualization](#model-visualization)
     * [Data visualization analysis](#data-visualization-analysis)
     * [Object detection papers](#object-detection-papers)
