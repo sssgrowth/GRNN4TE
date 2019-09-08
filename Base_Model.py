@@ -37,33 +37,34 @@ class Base_Model(torch.nn.Module):
 		self.char_types=len(self.char_ix)
 		self.build_size=len(self.build_vocab_ix)
 
-	def muti_head_attention(self,q,k,v,nb_head,size_per_head):
+	def muti_head_attention(self,q,k,v,nb_head,size_per_head,mask=None):
 		
-		def format_seq(x,linear):
+		def format_seq(x,linear,f=None):
 			s=x.size()
 			x=linear(x)
-			x=x.view([s[0],s[1],nb_head,size_per_head])
-			x=torch.transpose(x,1,2)
-			return x
-		
+			t=torch.split(x,size_per_head, dim=-1) #(b,s,dim) X nb
+			s=[]
+			for v in t:
+				s.append(v.unsqueeze(1))
+			v=torch.cat(s,dim=1)
+			return v
+
 		q=format_seq(q,self.q_linear)
 		k=format_seq(k,self.k_linear)
 		v=format_seq(v,self.v_linear)
 
 		# (b,head,seq,dim)
 		sq=q.size()
-		_q=q.view([sq[0]*sq[1],sq[2],sq[3]])
-		_k=k.view([sq[0]*sq[1],sq[2],sq[3]])
-		_v=v.view([sq[0]*sq[1],sq[2],sq[3]])
-		
+		_q=q
+		_k=k
+		_v=v
+		_q=_q.mean(2,keepdim=True)
 		factor=np.sqrt(float(size_per_head))
-		a=torch.bmm(_q,torch.transpose(_k,1,2))/factor
+		a=torch.matmul(_q,torch.transpose(_k,-1,-2))/factor
 		alpha=torch.nn.functional.softmax(a,-1)
-
-		o=torch.bmm(alpha,_v)
-		_o=o.view([sq[0],sq[1],sq[2],sq[3]])
-		o1=torch.transpose(_o,1,2)
-		o2=o1.contiguous().view([sq[0],sq[2],nb_head*size_per_head])
+		o=alpha.matmul(_v)
+		o1=torch.transpose(o,1,2)
+		o2=o1.contiguous().view([sq[0],1,nb_head*size_per_head])
 		return o2,o2,alpha
 
 	def init_lstm(self,input_lstm):
