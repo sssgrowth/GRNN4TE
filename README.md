@@ -91,7 +91,7 @@ Papers about face detection.
 }
 ```  
 ## Updating...
-* 2019-Aug-10, GRNN4TE v0.2, add ranking mechanism to the model
+* 2019-Aug-10, CIL4TE v0.2, enhance the cascade inference learning paradigm and add ranking mechanism to the model
 * 2019-Mar-20, GRNN4TE v0.2, support vertex visualization for interpretability and adding optimized graph search
 * 2019-Jan-20, GRNN4TE v0.2, compatible with pre-trained BERT
 * 2018-Nov-03, GRNN4TE v0.2, enhance joint representation learning
