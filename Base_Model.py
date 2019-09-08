@@ -42,7 +42,7 @@ class Base_Model(torch.nn.Module):
 		def format_seq(x,linear,f=None):
 			s=x.size()
 			x=linear(x)
-			t=torch.split(x,size_per_head, dim=-1) #(b,s,dim) X nb
+			t=torch.split(x,size_per_head, dim=-1) 
 			s=[]
 			for v in t:
 				s.append(v.unsqueeze(1))
@@ -53,7 +53,6 @@ class Base_Model(torch.nn.Module):
 		k=format_seq(k,self.k_linear)
 		v=format_seq(v,self.v_linear)
 
-		# (b,head,seq,dim)
 		sq=q.size()
 		_q=q
 		_k=k
