@@ -91,10 +91,11 @@ Papers about face detection.
 }
 ```  
 ## Updating...
-* 2019-Aug-10, CIL4TE v0.2, enhance the cascade inference learning paradigm for other models  
-* 2019-Aug-09, GRNN4TE v0.2, introduce ranking mechanism for candidate selection
-* 2019-Mar-20, GRNN4TE v0.2, support vertex visualization for interpretability and adding optimized graph search
-* 2019-Jan-20, GRNN4TE v0.2, compatible with pre-trained BERT
-* 2018-Nov-03, GRNN4TE v0.2, enhance joint representation learning
+2019-Oct-15, SwitchNet v0.3.0, introduce EOIs and POEOIs and establish a direct link between relation extraction and computer vision studies  
+* 2019-Aug-10, CIL4TE v0.2.4, enhance the cascade inference learning paradigm for other models  
+* 2019-Aug-09, GRNN4TE v0.2.3, introduce ranking mechanism for candidate selection
+* 2019-Mar-20, GRNN4TE v0.2.2, support vertex visualization for interpretability and adding optimized graph search
+* 2019-Jan-20, GRNN4TE v0.2.1, compatible with pre-trained BERT
+* 2018-Nov-03, GRNN4TE v0.2.0, enhance joint representation learning
 * 2018-Jun-10, GRNN v0.1, initial version, build a new framework, graph recursive neural network, for graph data processing and lifelong relation extraction
 
