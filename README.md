@@ -91,7 +91,7 @@ Papers about face detection.
 }
 ```  
 ## Updating...
-2019-Oct-15, SwitchNet v0.3.0, introduce EOIs and POEOIs and establish a direct link between relation extraction and computer vision studies  
+* 2019-Oct-15, SwitchNet v0.3.0, introduce EOIs and POEOIs and establish a direct link between relation extraction and computer vision studies  
 * 2019-Aug-10, CIL4TE v0.2.4, enhance the cascade inference learning paradigm for other models  
 * 2019-Aug-09, GRNN4TE v0.2.3, introduce ranking mechanism for candidate selection
 * 2019-Mar-20, GRNN4TE v0.2.2, support vertex visualization for interpretability and adding optimized graph search
